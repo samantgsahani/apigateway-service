@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'MAVEN_HOME-3.6.3'
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -8,10 +12,10 @@ pipeline {
             }
         }
         
-       stage('maven compile'){
-       steps{
-             bat 'mvn compile'
-           }
-       } 
+        stage('Maven Compile') {
+            steps {
+                bat 'mvn compile'
+            }
+        }
     }
 }
