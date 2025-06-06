@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'MAVEN_HOME-3.9.9'
+        maven 'maven-tool-3.9.9'
     }
 
     stages {
